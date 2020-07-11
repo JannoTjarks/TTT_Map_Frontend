@@ -1,0 +1,28 @@
+﻿@page
+@model AddRatingModel
+@{
+    ViewData["Title"] = "Add Rating";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<form method="post">
+    <div class="form-group">
+        <label for="InputSteamid">Steam-ID</label>
+        <input type="text" class="form-control" name="steamid" placeholder="Steam-ID">
+    </div>
+    <div class="form-group">
+        <label for="InputRating">Rating</label>
+        <input type="text" class="form-control" name="rating" placeholder="1-5">
+    </div>
+    <div class="form-group">
+        <label for="map">Map-Name</label>
+        <input type="text" class="form-control" name="map" placeholder="ttt_map">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>        
+</form>
+
+<div class="md-form mt-5" style="max-width:300px">
+    <label for="response">Backend Response:</label>
+    <textarea readonly id="response" class="md-textarea form-control" rows="3">@Model.Message</textarea>    
+</div>
